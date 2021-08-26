@@ -23,18 +23,29 @@ console.log('estou funcionando?')
 // 2 - Botão com o texto: 'Exibir Nome' e ao clicar neste botão 
 // é exibido um alert com o valor do campo nome completo, 
 // ex: ' O Nome Completo é: "xxxx". '
+// 3 - quando clica no botão o input fica verde
 
 // document.getElementById("botao").addEventListener("click",console.log('entrei?'));
+// addEventListener só roda função, ele não roda o console direto, ou alert
 
-document.querySelector("#botao").addEventListener("click",mariana());
+document.querySelector("#botao").addEventListener("click",nomeCompleto);
 
-function mariana(){
-    console.log("entrei?")
+
+function nomeCompleto(){
+    // google -> javascript return input value
+    const nomeCompleto = document.querySelector("#btn-exibir-nome")
+    console.log("entrei?",nomeCompleto.value)
+    alert('O Nome Completo é: ' +  nomeCompleto.value)
 }
 
+document.querySelector("#botao2").addEventListener("click",changeColor);
 
+function changeColor(){
+    console.log("console mudar cor verde")
+    const changeColor = document.querySelector("#btn-exibir-nome").style.backgroundColor = "lightgreen";
+}
 
-// function nome() {
+// RESPOSTA DO EXERCÍCIO function nome() {
 //     const nomeCompleto = document.getElementById('nome-completo').value;
 //     alert('O Nome Completo é: ' + nomeCompleto );	
 //   };
