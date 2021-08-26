@@ -41,8 +41,7 @@ function nomeCompleto(){
 document.querySelector("#botao2-ex4").addEventListener("click",changeColor);
 
 function changeColor(){
-    console.log("console mudar cor verde")
-    const changeColor = document.querySelector("#input-ex4").style.backgroundColor = "lightgreen";
+    document.querySelector("#input-ex4").style.backgroundColor = "lightgreen";
 }
 
 // RESPOSTA DO EXERCÍCIO function nome() {
@@ -65,4 +64,23 @@ function countingCharacters (){
     const coutingCharacters = document.querySelector("#input-ex4").value.length
     alert('A quantidade de caracteres é: ' +  coutingCharacters)
 }
+
+
+// EXERCÍCIO 6
+// No seu HTML exiba a imagem de uma lampada, ao clicar em cima da lampada, 
+//troque o src dela para a lampada que está acessa.
+//SRC da Lampada (apagada)  
+//https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true  
+//SRC da Lampada (acessa)  
+//https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true
+
+
+document.querySelector("#imagem-ex6").addEventListener("click", changeImage)
+
+function changeImage(){
+document.querySelector("#imagem-ex6").src = "https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true"
+}
+
+
+
 
