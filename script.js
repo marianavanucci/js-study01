@@ -28,24 +28,41 @@ console.log('estou funcionando?')
 // document.getElementById("botao").addEventListener("click",console.log('entrei?'));
 // addEventListener só roda função, ele não roda o console direto, ou alert
 
-document.querySelector("#botao").addEventListener("click",nomeCompleto);
+document.querySelector("#botao-ex4").addEventListener("click",nomeCompleto);
 
 
 function nomeCompleto(){
     // google -> javascript return input value
-    const nomeCompleto = document.querySelector("#btn-exibir-nome")
+    const nomeCompleto = document.querySelector("#input-ex4")
     console.log("entrei?",nomeCompleto.value)
     alert('O Nome Completo é: ' +  nomeCompleto.value)
 }
 
-document.querySelector("#botao2").addEventListener("click",changeColor);
+document.querySelector("#botao2-ex4").addEventListener("click",changeColor);
 
 function changeColor(){
     console.log("console mudar cor verde")
-    const changeColor = document.querySelector("#btn-exibir-nome").style.backgroundColor = "lightgreen";
+    const changeColor = document.querySelector("#input-ex4").style.backgroundColor = "lightgreen";
 }
 
 // RESPOSTA DO EXERCÍCIO function nome() {
 //     const nomeCompleto = document.getElementById('nome-completo').value;
 //     alert('O Nome Completo é: ' + nomeCompleto );	
 //   };
+
+
+// EXERCÍCIO 5
+// exiba a quantidade de letras que possuem o texto inserido ao clicar no botão
+// Exemplos de entrada e saida:
+// 'Gabriel' // 7
+// 'Daniel' // 6
+// 'Ronaldo' // 6
+// 'Dennis Ritchie' // 14 (Espaço conta)
+
+document.querySelector("#botao-ex5").addEventListener("click",countingCharacters)
+
+function countingCharacters (){
+    const coutingCharacters = document.querySelector("#input-ex4").value.length
+    alert('A quantidade de caracteres é: ' +  coutingCharacters)
+}
+
