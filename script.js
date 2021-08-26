@@ -24,10 +24,17 @@ console.log('estou funcionando?')
 // é exibido um alert com o valor do campo nome completo, 
 // ex: ' O Nome Completo é: "xxxx". '
 
-document.getElementById("btn-exibir-nome").addEventListener("click",nome);
+// document.getElementById("botao").addEventListener("click",console.log('entrei?'));
+
+document.querySelector("#botao").addEventListener("click",mariana());
+
+function mariana(){
+    console.log("entrei?")
+}
 
 
-function nome() {
-    const nomeCompleto = document.getElementById('nome-completo').value;
-    alert('O Nome Completo é: ' + nomeCompleto );	
-  };
+
+// function nome() {
+//     const nomeCompleto = document.getElementById('nome-completo').value;
+//     alert('O Nome Completo é: ' + nomeCompleto );	
+//   };
