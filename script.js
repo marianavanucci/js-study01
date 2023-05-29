@@ -95,3 +95,13 @@ function changeImage2() {
 // EXERCÍCIO 7A
 // Faça 2 campos no HTML chamados: 'Nome', 'Sobrenome' e um botão 'Saudação';
 //ao clicar no botão exibir um alert: 'Olá {NOME} {SOBRENOME}'
+
+document.querySelector("#botao-ex7a").addEventListener("click", fullName);
+
+function fullName() {
+  // google -> javascript return input value
+  const firstName = document.querySelector("#firstName");
+  const lastName = document.querySelector("#lastName");
+  console.log("entrei?", firstName.value);
+  alert("O Nome Completo é: " + firstName.value + " " + lastName.value);
+}
