@@ -105,3 +105,31 @@ function fullName() {
   console.log("entrei?", firstName.value);
   alert("O Nome Completo é: " + firstName.value + " " + lastName.value);
 }
+
+// (8) Crie um campo texto parar preencher um CPF <input maxlength="11" id="cpf" />, e exiba ao lado com pontuação conforme preencher
+
+function exercicio8() {
+  function adicionarGatilhos() {
+    document.querySelector("body").addEventListener("click", logarAlgumaCoisa);
+  }
+
+  function logarAlgumaCoisa() {
+    const inputQueOUsuarioVaiDigitarCpf = document.querySelector("#input-ex8");
+    const valorDoCpf = inputQueOUsuarioVaiDigitarCpf.value;
+    const cpfFormatado = formatarCPF(valorDoCpf);
+    const elementoQueVaiMudar = document.querySelector("#p-ex8");
+    elementoQueVaiMudar.innerHTML = cpfFormatado;
+    console.log("CPF FORMATADO: ", cpfFormatado);
+  }
+
+  function formatarCPF(cpf) {
+    cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+    return cpf;
+  }
+
+  adicionarGatilhos();
+}
+
+exercicio8();
+
+// (9) Preencha um CPF com pontuação <input maxlength="14" id="cpfPoint" /> e no campo ao lado exiba sem pontuação.
